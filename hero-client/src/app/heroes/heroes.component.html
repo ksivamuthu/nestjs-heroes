@@ -1,0 +1,27 @@
+<div>
+  <h3>
+    GraphQL Heroes
+  </h3>
+  <div>
+    <div>
+        <label>Hero ID:</label>
+        <input #heroId/>
+    </div> 
+    <br/>
+    <div>
+    <label>Hero Name:</label>
+     <input #heroName/>
+    </div>
+      <br/>
+     <button (click)="add(heroId.value, heroName.value); heroId.value =''; heroName.value=''">
+       Add
+     </button>
+    </div>
+  <div>
+    <ul>
+      <li *ngFor="let hero of heroes">
+         <span>{{hero.name}}</span>
+      </li>
+    </ul>
+  </div>
+</div>

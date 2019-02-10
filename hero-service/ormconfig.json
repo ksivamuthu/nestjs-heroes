@@ -1,0 +1,7 @@
+{
+    "type": "mongodb",
+    "host": "localhost",
+    "database": "nestjs-heroes",
+    "entities": ["src/**/**.model{.ts,.js}"],
+    "synchronize": true
+}

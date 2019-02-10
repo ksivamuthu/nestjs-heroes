@@ -1,0 +1,32 @@
+type Hero {
+    id: ID!
+    name: String!
+    sayings: String
+    powers: [Power]
+}
+
+type Power {
+    name: String!
+    description: String!
+}
+
+input HeroInput {
+    id: Int!
+    name: String!
+    sayings: String
+}
+
+type Query {
+    allHeroes : [Hero]
+    heroById(id: Int!): Hero
+}
+
+type Mutation {
+    createHero(hero: HeroInput!): Hero
+    updateHero(hero: HeroInput!): Hero
+    deleteHero(id: Int!): Boolean
+}
+
+type Subscription {
+    heroCreated: Hero
+}
