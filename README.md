@@ -14,7 +14,7 @@ $ cd hero-service
 $ npm install
 ```
 
-## Running the app
+### Running the app
 
 ```bash
 # development
